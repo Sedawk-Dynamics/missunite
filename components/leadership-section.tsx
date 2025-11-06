@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Crown, Users, Award } from "lucide-react"
+import { Crown, Users, Award, Briefcase } from "lucide-react"
 
 const LeadershipSection = () => {
   const leaders = [
@@ -16,19 +16,27 @@ const LeadershipSection = () => {
     },
     {
       name: "Mr. Sudhanshu Mishra",
-      title: "President",
+      title: "Chairman and Founder",
       location: "India",
       description:
-        "Mr. Mishra, President of Miss Unite International, drives global growth with vision and integrity, championing empowerment, diversity, and unity through inclusive leadership and purposeful pageantry.",
+        "Mr. Mishra, Chairman and Founder of Miss Unite International, is the driving force behind its creation and global expansion—leading with a transformative vision that celebrates empowerment, inclusivity, and purpose-driven leadership.",
       icon: Users,
     },
     {
       name: "Mr. Manas Sahoo",
-      title: "Vice President",
+      title: "Vice-Chairman and Managing Director",
       location: "India",
       description:
-        "Mr. Sahoo, Vice President of Miss Unite International, ensures flawless execution through strategic operations, driving global standards, inclusivity, and professionalism behind every successful event.",
+        "Mr. Sahoo, Vice-Chairman and Managing Director of Miss Unite International, oversees strategic operations and execution, upholding world-class standards while fostering unity and professionalism across all global platforms.",
       icon: Award,
+    },
+    {
+      name: "Mr. Jagdeep Singh",
+      title: "Operational Director",
+      location: "India",
+      description:
+        "Mr. Singh, Operational Director of Miss Unite International, ensures seamless coordination and execution across all divisions, bringing efficiency, precision, and dedication to every facet of the organization’s global operations.",
+      icon: Briefcase,
     },
   ]
 
@@ -57,7 +65,7 @@ const LeadershipSection = () => {
         </motion.div>
 
         {/* Leadership Cards */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {leaders.map((leader, index) => (
             <motion.div
               key={index}
@@ -98,8 +106,8 @@ const LeadershipSection = () => {
           <div className="glass-effect border-white/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="font-serif text-2xl font-bold text-white mb-4">Join Our Global Movement</h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              By becoming a National Director for Miss Unite International 2026, you are not just acquiring a
-              franchise—you are stepping into a role of leadership, influence, and prestige on an international stage.
+              By becoming a National Director for Miss Unite International 2026, you are not just acquiring a franchise—
+              you are stepping into a role of leadership, influence, and prestige on an international stage.
             </p>
             <p className="text-yellow-400 font-semibold">
               We welcome you to be a part of this journey where beauty meets purpose, and where together, we inspire the

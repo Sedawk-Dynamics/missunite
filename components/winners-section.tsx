@@ -6,6 +6,7 @@ import { Crown, Trophy, Star, Award } from "lucide-react"
 import Image from "next/image"
 
 const WinnersSection = () => {
+  
   const winners2024 = [
     {
       name: "Sophia Weisz",
@@ -14,6 +15,7 @@ const WinnersSection = () => {
       position: "Winner",
       icon: Crown,
       rank: 1,
+      image: "/images/Netherlands2.jpeg",
     },
     {
       name: "Bellah Sthabile",
@@ -22,6 +24,7 @@ const WinnersSection = () => {
       position: "1st Runner Up",
       icon: Trophy,
       rank: 2,
+      image: "/images/SouthAfrica.jpeg",
     },
     {
       name: "Vanessa Stegling",
@@ -30,6 +33,7 @@ const WinnersSection = () => {
       position: "2nd Runner Up",
       icon: Award,
       rank: 3,
+      image: "/images/image.png",
     },
   ]
 
@@ -50,7 +54,7 @@ const WinnersSection = () => {
       position: "1st Runner Up",
       icon: Trophy,
       rank: 2,
-      image: "/images/Rachel Aaij.jpeg",
+      image: "/images/Rachel Aaij1.jpeg",
     },
     {
       name: "Jamilatu Aziz Abu",
@@ -71,6 +75,7 @@ const WinnersSection = () => {
       image: "/images/Joubert Pauline.jpeg",
     },
   ]
+   
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -106,7 +111,7 @@ const WinnersSection = () => {
       <Card className="glass-effect border-white/20 h-full hover:border-yellow-400/50 transition-all duration-500 group-hover:shadow-2xl overflow-hidden">
         <CardContent className="p-0">
           {/* Winner Image */}
-          <div className="relative h-64 overflow-hidden">
+          <div className="relative h-85 overflow-hidden">
             <Image
               src={
                 winner.image
