@@ -35,12 +35,13 @@ const WinnersSection = () => {
 
   const winners2025 = [
     {
-      name: "Selma Mutenda",
-      country: "Zimbabwe",
+      name: "Marte Kasara Wawa",
+      country: "Kenya",
       title: "Miss Unite International 2025",
       position: "Winner",
       icon: Crown,
       rank: 1,
+      image: "/images/Marte-Kasara-Wawa.jpeg",
     },
     {
       name: "Rachel Aaij",
@@ -49,14 +50,7 @@ const WinnersSection = () => {
       position: "1st Runner Up",
       icon: Trophy,
       rank: 2,
-    },
-    {
-      name: "Marte Wawa",
-      country: "Kenya",
-      title: "2nd Runner Up 2025",
-      position: "2nd Runner Up",
-      icon: Award,
-      rank: 3,
+      image: "/images/Rachel Aaij.jpeg",
     },
     {
       name: "Joubert Pauline",
@@ -64,7 +58,17 @@ const WinnersSection = () => {
       title: "3rd Runner Up 2025",
       position: "3rd Runner Up",
       icon: Star,
+      rank: 3,
+      image: "/images/Joubert Pauline.jpeg",
+    },
+    {
+      name: "Jamilatu Aziz Abu",
+      country: "Ghana",
+      title: "Miss Unite International 2nd Runner Up",
+      position: "2nd Runner Up",
+      icon: Award,
       rank: 4,
+      image: "/images/Jamilatu Aziz Abu.jpeg",
     },
   ]
 
@@ -104,7 +108,11 @@ const WinnersSection = () => {
           {/* Winner Image */}
           <div className="relative h-64 overflow-hidden">
             <Image
-              src={`/placeholder.svg?height=300&width=250&query=elegant pageant winner from ${winner.country}`}
+              src={
+                winner.image
+                  ? winner.image
+                  : `/placeholder.svg?height=300&width=250&query=elegant pageant winner from ${winner.country}`
+              }
               alt={`${winner.name} - ${winner.title}`}
               width={250}
               height={300}
@@ -119,8 +127,8 @@ const WinnersSection = () => {
                   winner.rank === 1
                     ? "bg-gradient-to-r from-yellow-400 to-yellow-600"
                     : winner.rank === 2
-                      ? "bg-gradient-to-r from-gray-300 to-gray-500"
-                      : "bg-gradient-to-r from-amber-600 to-amber-800"
+                    ? "bg-gradient-to-r from-gray-300 to-gray-500"
+                    : "bg-gradient-to-r from-amber-600 to-amber-800"
                 }`}
               >
                 <winner.icon className="w-6 h-6 text-white" />
@@ -153,7 +161,7 @@ const WinnersSection = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/30 to-slate-900/50" />
 
-      {/* Animated Background Elements */}
+      {/* Floating Crown Icons */}
       <div className="absolute inset-0">
         {[...Array(12)].map((_, i) => (
           <motion.div
@@ -178,8 +186,9 @@ const WinnersSection = () => {
         ))}
       </div>
 
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -247,30 +256,6 @@ const WinnersSection = () => {
               <WinnerCard key={`2024-${index}`} winner={winner} index={index} />
             ))}
           </motion.div>
-        </motion.div>
-
-        {/* 2026 Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20"
-        >
-          <div className="glass-effect border-white/20 rounded-2xl p-8 lg:p-12 text-center">
-            <div className="w-20 h-20 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 golden-glow">
-              <Crown className="w-10 h-10 text-black" />
-            </div>
-            <h3 className="font-serif text-3xl font-bold text-white mb-4">Miss Unite International 2026</h3>
-            <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-              The crown awaits its next worthy bearer. Will you be the one to unite nations and ignite change?
-            </p>
-            <div className="text-yellow-400 font-semibold text-lg mb-4">Tentative Timeline: December 2026 in India</div>
-            <p className="text-gray-300 leading-relaxed">
-              Join us for the most prestigious edition yet, as we bring together delegates from around the world to
-              celebrate purpose-driven beauty and cultural unity in the incredible land of India.
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>
