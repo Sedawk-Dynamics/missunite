@@ -53,15 +53,6 @@ const WinnersSection = () => {
       image: "/images/Rachel Aaij.jpeg",
     },
     {
-      name: "Joubert Pauline",
-      country: "France",
-      title: "3rd Runner Up 2025",
-      position: "3rd Runner Up",
-      icon: Star,
-      rank: 3,
-      image: "/images/Joubert Pauline.jpeg",
-    },
-    {
       name: "Jamilatu Aziz Abu",
       country: "Ghana",
       title: "Miss Unite International 2nd Runner Up",
@@ -69,6 +60,15 @@ const WinnersSection = () => {
       icon: Award,
       rank: 4,
       image: "/images/Jamilatu Aziz Abu.jpeg",
+    },
+     {
+      name: "Joubert Pauline",
+      country: "France",
+      title: "3rd Runner Up 2025",
+      position: "3rd Runner Up",
+      icon: Star,
+      rank: 3,
+      image: "/images/Joubert Pauline.jpeg",
     },
   ]
 
