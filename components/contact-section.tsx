@@ -45,7 +45,7 @@ const ContactSection = () => {
     {
       icon: Calendar,
       title: "Grand Finale",
-      date: "December 2026",
+      date: "February 2026",
       description: "Tentative date for the international competition in India",
     },
   ]

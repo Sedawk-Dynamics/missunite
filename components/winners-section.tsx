@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Crown, Trophy, Star, Award } from "lucide-react"
+import { Crown, Trophy, Award } from "lucide-react"
 import Image from "next/image"
 
 const WinnersSection = () => {
@@ -39,38 +39,29 @@ const WinnersSection = () => {
 
   const winners2025 = [
     {
-      name: "Marte Kasara Wawa",
-      country: "Kenya",
+      name: "Rachel Aaij",
+      country: "Netherlands",
       title: "Miss Unite International 2025",
       position: "Winner",
       icon: Crown,
       rank: 1,
-      image: "/images/Marte-Kasara-Wawa.jpeg",
-    },
-    {
-      name: "Rachel Aaij",
-      country: "Netherlands",
-      title: "1st Runner Up 2025",
-      position: "1st Runner Up",
-      icon: Trophy,
-      rank: 2,
       image: "/images/Rachel Aaij1.jpeg",
     },
     {
       name: "Jamilatu Aziz Abu",
       country: "Ghana",
-      title: "Miss Unite International 2nd Runner Up",
-      position: "2nd Runner Up",
-      icon: Award,
-      rank: 4,
+      title: "1st Runner Up 2025",
+      position: "1st Runner Up",
+      icon: Trophy,
+      rank: 2,
       image: "/images/Jamilatu Aziz Abu.jpeg",
     },
-     {
+    {
       name: "Joubert Pauline",
       country: "France",
-      title: "3rd Runner Up 2025",
-      position: "3rd Runner Up",
-      icon: Star,
+      title: "2nd Runner Up 2025",
+      position: "2nd Runner Up",
+      icon: Award,
       rank: 3,
       image: "/images/Joubert Pauline.jpeg",
     },
@@ -230,7 +221,7 @@ const WinnersSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
           >
             {winners2025.map((winner, index) => (
               <WinnerCard key={`2025-${index}`} winner={winner} index={index} />
